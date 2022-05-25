@@ -12,4 +12,5 @@ convert yolov3 weights into tensorflow format using following command
 python convert_weights_yolo2tf.py
 
 run command
+
 python detect.py
