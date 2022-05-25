@@ -4,9 +4,11 @@ Implement Detect and tracking multiple objects in webcam and video file on webpa
 install required packages using following commands
 
 pip install -r requirements-gpu.txt
+
 pip install -r requirements.txt
 
 convert yolov3 weights into tensorflow format using following command
+
 python convert_weights_yolo2tf.py
 
 run command
