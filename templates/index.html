@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multiple-Object Detection and Tracking</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet" type="text/css" href="../static/index.css" />
+  </head>
+  <body>
+  <p><u><i><b> Multiple-Object Detection and Tracking</b></i></u></p>
+
+{% if filename %}
+	<div style="margin: 10px auto;">
+		<video width="700" height="600" autoplay="autoplay" controls="controls" preload="preload">
+			<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4">
+		</video>
+	</div>
+{% endif %}
+    <div class="container">
+     <div class="row">
+      <div class="col-lg-8  offset-lg-2">
+          <b><i><h1 class="mt-5">WEB CAMERA</h1></i></b>
+			  <form method="post" action="{{ url_for('tasks') }}">
+                  <button class="button button1" type="submit" value="Stop/Start" name="stop">Stop/Start</button>
+              </form>
+          <p>
+            <img src="{{ url_for('webcam') }}" height="80%">
+          </p>
+      </div>
+    </div>
+  </div>
+    <div class="App">
+      <header class="App-header">
+
+        <form method="POST" action="/detect" enctype="multipart/form-data">
+            <dl>
+		        <p>
+			        <input type="file" name="file" autocomplete="off" required>
+		        </p>
+            </dl>
+            <button class="btn btn-primary" name="send" type="submit" value="Upload">Upload</button>
+        </form>
+
+      </header>
+    </div>
+
+
+  </body>
+</html>
+
+
+
