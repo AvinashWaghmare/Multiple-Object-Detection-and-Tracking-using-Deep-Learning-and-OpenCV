@@ -8,13 +8,7 @@
   <body>
   <p><u><i><b> Multiple-Object Detection and Tracking</b></i></u></p>
 
-{% if filename %}
-	<div style="margin: 10px auto;">
-		<video width="700" height="600" autoplay="autoplay" controls="controls" preload="preload">
-			<source src="{{ url_for('display_video', filename=filename) }}" type="video/mp4">
-		</video>
-	</div>
-{% endif %}
+
     <div class="container">
      <div class="row">
       <div class="col-lg-8  offset-lg-2">
@@ -28,20 +22,7 @@
       </div>
     </div>
   </div>
-    <div class="App">
-      <header class="App-header">
-
-        <form method="POST" action="/detect" enctype="multipart/form-data">
-            <dl>
-		        <p>
-			        <input type="file" name="file" autocomplete="off" required>
-		        </p>
-            </dl>
-            <button class="btn btn-primary" name="send" type="submit" value="Upload">Upload</button>
-        </form>
-
-      </header>
-    </div>
+   
 
 
   </body>
